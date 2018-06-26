@@ -1,0 +1,17 @@
+{
+  "name": "node-studying",
+  "version": "1.0.0",
+  "description": "aplicação para funcionar como um gateway de pagamentos, ou seja, uma plataforma que pode ser utilizada por outros aplicativos para integrar meios de pagamento.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5"
+  }
+}
