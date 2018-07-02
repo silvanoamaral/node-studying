@@ -4,6 +4,20 @@ module.exports = function( app ) {
         res.send('Ok');
     });
 
+    app.put('/pagamentos/pagamento:id', function(req, res) {
+        var id = req.params.id;
+
+        var connection = app.persistencia.connectionFactory();
+        var pagamentoDao = new app.persistencia.PagamentoDao(connection);
+
+        pagamento.id = id;
+        pagamento.status = 'Confirmado';
+
+        pagamentoDao.atuliza(pagamento, function(error, resultado) {
+
+        });
+    });
+
     app.post('/pagamentos/pagamento', function(req, res) {
         req.assert("forma_de_pagamento", "Forma de pagmento é obrigatório").notEmpty();
 
